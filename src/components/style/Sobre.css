@@ -1,0 +1,210 @@
+/* src/components/style/Sobre.css */
+.sobre-section {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.sobre-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.sobre-imagem-container {
+  flex: 1;
+  position: relative;
+}
+
+.sobre-imagem-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Para manter proporção quadrada */
+}
+
+.sobre-imagem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: float 6s ease-in-out infinite;
+  border: 5px solid #ffffff;
+  z-index: 2;
+}
+
+/* Elementos decorativos com cores específicas */
+.elemento-decorativo {
+  position: absolute;
+  z-index: 1;
+}
+
+.elemento-laranja {
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border: 8px solid #FFA726; /* Laranja */
+  border-radius: 50%;
+  background: transparent;
+}
+
+.elemento-azul {
+  bottom: -30px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  border: 8px solid #42A5F5; /* Azul */
+  border-radius: 50%;
+  background: transparent;
+}
+
+.sobre-titulo {
+  font-size: 2.8rem;
+  color: #1565C0; /* Azul escuro */
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sobre-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: #FFA726; /* Laranja */
+  border-radius: 2px;
+}
+
+.sobre-descricao {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #424242; /* Cinza escuro */
+  margin-bottom: 1.5rem;
+}
+
+.sobre-qualificacoes {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.qualificacao-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  flex: 1;
+  background: transparent; /* Fundo transparente */
+  border: 2px solid; /* Borda será definida por classe */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.qualificacao-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.3); /* Leve fundo branco ao passar o mouse */
+}
+
+.qualificacao-numero {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.qualificacao-texto {
+  display: block;
+  font-size: 1rem;
+  color: #424242;
+}
+
+/* Cores específicas para cada card */
+.qualificacao-1 {
+  border-color: #FFA726; /* Laranja */
+}
+
+.qualificacao-1 .qualificacao-numero {
+  color: #FFA726; /* Laranja */
+}
+
+.qualificacao-2 {
+  border-color: #42A5F5; /* Azul */
+}
+
+.qualificacao-2 .qualificacao-numero {
+  color: #42A5F5; /* Azul */
+}
+
+.qualificacao-3 {
+  border-color: #66BB6A; /* Verde */
+}
+
+.qualificacao-3 .qualificacao-numero {
+  color: #66BB6A; /* Verde */
+}
+
+/* Animação flutuante */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .sobre-content {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  
+  .sobre-imagem-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .sobre-qualificacoes {
+    flex-wrap: wrap;
+  }
+  
+  .qualificacao-item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .sobre-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .qualificacao-item {
+    flex: 0 0 100%;
+  }
+  
+  .sobre-titulo {
+    font-size: 2.2rem;
+  }
+}

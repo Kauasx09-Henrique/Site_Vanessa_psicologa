@@ -1,0 +1,218 @@
+/* src/components/style/Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1565C0; /* Azul escuro */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo:hover {
+  color: #FF8A00; /* Laranja */
+  transform: translateY(-2px);
+}
+
+.nav-logo i {
+  font-size: 2rem;
+  color: #FF8A00; /* Laranja */
+}
+
+/* Menu Hambúrguer - Visível apenas em mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+  background: #1565C0; /* Azul escuro */
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Estilos do menu principal */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #424242; /* Cinza escuro */
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #FF8A00; /* Laranja */
+}
+
+/* Efeito sublinhado nos links */
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF8A00; /* Laranja */
+  transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+/* Estilo para o botão de agendamento (agora sem destaque) */
+.nav-button {
+  color: #424242 !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-button:hover {
+  color: #FF8A00 !important; /* Laranja no hover */
+  border-color: #FF8A00; /* Borda laranja no hover */
+  transform: translateY(-2px);
+  background: transparent !important;
+}
+
+.nav-button::after {
+  display: none;
+}
+
+/* =============== RESPONSIVIDADE =============== */
+@media (max-width: 992px) {
+  .nav-menu {
+    gap: 1.2rem;
+  }
+  
+  .nav-item a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  /* Animação do hambúrguer para X */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); /* Degradê azul */
+    width: 280px;
+    height: 100vh;
+    padding-top: 6rem;
+    gap: 2.5rem;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+    transition: right 0.5s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-item a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .nav-item a:hover {
+    color: #FFD54F; /* Amarelo claro para contraste */
+  }
+  
+  .nav-item a::after {
+    background-color: #FFD54F; /* Amarelo claro */
+  }
+  
+  .nav-button {
+    color: #ffffff !important;
+    border: 2px solid #FFD54F; /* Borda amarela */
+  }
+  
+  .nav-button:hover {
+    color: #FFD54F !important;
+    border-color: #ffffff;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+  
+  .nav-logo i {
+    font-size: 1.5rem;
+  }
+}
