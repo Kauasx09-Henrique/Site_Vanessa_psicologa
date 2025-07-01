@@ -35,7 +35,7 @@ const Sobre = () => {
           <div className="sobre-imagem-container">
             <div className="sobre-imagem-wrapper">
               <img 
-                src="src/assets/Vanessa.png" 
+                src="public/Vanessa.png" 
                 alt="Dra. Vanessa"
                 className="sobre-imagem"
               />
