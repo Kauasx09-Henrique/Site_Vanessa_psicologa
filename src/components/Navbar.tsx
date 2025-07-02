@@ -29,7 +29,7 @@ function Navbar() {
           <a href="#sobre" onClick={toggleMenu}>Sobre Mim</a>
         </li>
         <li className="nav-item">
-          <a href="#abordagem" onClick={toggleMenu}>Abordagem</a>
+          <a href="#abordagem" onClick={toggleMenu}>Especialidade</a>
         </li>
         <li className="nav-item">
           <a href="#contato" className="nav-button" onClick={toggleMenu}>Local de Atendimento</a>

@@ -18,6 +18,11 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1.8rem;
 }
 
 .section-header h2 {
@@ -64,6 +69,11 @@
   position: relative;
   z-index: 1;
   border-top: 4px solid #42A5F5; /* Azul */
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1.4rem;
 }
 
 .abordagem-card:hover {
@@ -180,19 +190,32 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1.4rem;
 }
 
 .video-info h3 {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   color: #1565C0;
   margin-bottom: 1.5rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .video-info p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #424242;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .destaque-box {
@@ -203,20 +226,26 @@
   margin: 2rem 0;
   display: flex;
   gap: 1rem;
+  
 }
 
 .destaque-box i {
   font-size: 2rem;
   color: #FF8A00;
   margin-top: 5px;
+  
+  
 }
 
 .destaque-box p {
-  font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #424242;
   line-height: 1.7;
   margin: 0;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .cta-buttons {
@@ -237,6 +266,10 @@
   transition: all 0.3s ease;
   background: linear-gradient(to right, #FF8A00, #FF5252);
   color: white !important;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .agendar-btn:hover {
@@ -248,14 +281,19 @@
 .especializacoes-container {
   margin-top: 5rem;
   text-align: center;
+  
 }
 
 .especializacoes-container h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #1565C0;
   margin-bottom: 3rem;
   position: relative;
   display: inline-block;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .especializacoes-container h3::after {
@@ -282,6 +320,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border-top: 4px solid #42A5F5;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .especializacao-item:hover {
@@ -297,15 +339,23 @@
 }
 
 .especializacao-item h4 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #2c3e50;
   margin-bottom: 1rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .especializacao-item p {
   color: #4a5568;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.5rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 /* Responsividade */
@@ -358,5 +408,12 @@
   .video-wrapper {
     min-height: 300px;
     padding: 10px;
+  }
+  .titulo4 {
+    font-size: 1.8rem;
+      font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   }
 }

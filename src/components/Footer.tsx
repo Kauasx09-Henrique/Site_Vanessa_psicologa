@@ -24,7 +24,7 @@ const Footer = () => {
           <h3>Contato</h3>
           <p>
             <i className="fas fa-phone"></i> 
-            (61) 9851-4838
+            (61) 99851-4838
           </p>
           <p>
             <i className="fas fa-envelope"></i> 
@@ -40,7 +40,7 @@ const Footer = () => {
                target="_blank" 
                rel="noopener noreferrer"
                aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
             </a>
             <a href="https://api.whatsapp.com/send?phone=5561998514838&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20o%20consult%C3%B3rio%20e%20os%20atendimentos." 
                target="_blank" 

@@ -10,7 +10,7 @@ const Sobre = () => {
           <div className="sobre-texto">
             <h2 className="sobre-titulo">Sobre Mim</h2>
             <p className="sobre-descricao">
-              Eu tenho 28 anos, me formei em 2018, portanto tenho 7 anos de Formada.
+              Eu tenho 30 anos, me formei em 2018, portanto tenho 7 anos de Formada.
               Tenho 6 anos de casada. E realizei um dos meus grandes sonhos, ser mãe. Tenho o Heitor que tem 5 anos e o Israel que tem 3 anos.
             </p>
             <p className="sobre-descricao">

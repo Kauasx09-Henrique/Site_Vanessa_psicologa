@@ -26,12 +26,7 @@ const Abordagem = () => {
       descricao: "Abordagem que envolve toda a família no processo terapêutico, trabalhando dinâmicas relacionais e padrões de comunicação para promover mudanças positivas.",
       beneficios: ["Conflitos familiares", "Problemas de comunicação", "Ajuste a mudanças", "Relação pais-filhos"]
     },
-    {
-      titulo: "Intervenção Precoce",
-      icone: "fas fa-baby",
-      descricao: "Trabalho especializado com bebês e crianças pequenas, focando no desenvolvimento saudável e na identificação precoce de possíveis dificuldades.",
-      beneficios: ["Atrasos no desenvolvimento", "Problemas de apego", "Dificuldades sensoriais", "Integração escolar"]
-    }
+
   ];
 
   return (
@@ -121,11 +116,6 @@ const Abordagem = () => {
               <i className="fas fa-school"></i>
               <h4>Dificuldades Escolares</h4>
               <p>Avaliação e intervenção em problemas de aprendizagem e adaptação escolar</p>
-            </div>
-            <div className="especializacao-item">
-              <i className="fas fa-brain"></i>
-              <h4>Neurodesenvolvimento</h4>
-              <p>Trabalho com crianças com TEA, TDAH e outras condições do neurodesenvolvimento</p>
             </div>
             <div className="especializacao-item">
               <i className="fas fa-heart"></i>

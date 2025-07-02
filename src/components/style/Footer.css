@@ -32,16 +32,24 @@
 .footer-column {
   flex: 1;
   min-width: 250px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   padding: 0 20px;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
+  font-size: 1.rem;
   margin-bottom: 1.8rem;
   position: relative;
   padding-bottom: 12px;
   font-weight: 600;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .footer-column h3::after {
@@ -56,11 +64,15 @@
 }
 
 .footer-column p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.3rem;
   line-height: 1.7;
   display: flex;
   align-items: flex-start;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .footer-column i {
@@ -94,8 +106,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #fff;
@@ -193,10 +205,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .footer-bottom i {
   color: #FF8A00; /* Laranja */
+  
 }
 
 /* Responsividade */

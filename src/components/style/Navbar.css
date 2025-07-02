@@ -1,5 +1,5 @@
 /* src/components/style/Navbar.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 
 .navbar {
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .nav-logo {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #1565C0; /* Azul escuro */
   text-decoration: none;
@@ -31,6 +31,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .nav-logo:hover {
@@ -77,10 +81,14 @@
   text-decoration: none;
   color: #424242; /* Cinza escuro */
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   position: relative;
   padding: 0.5rem 0;
   transition: all 0.3s ease;
+    font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .nav-item a:hover {

@@ -1,9 +1,14 @@
-/* src/components/style/Sobre.css */
+/* src/components/style/Sobre.css - VERSÃO FINAL CORRIGIDA */
+
+/* --- FONTES IMPORTADAS --- */
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:wght@400;700&display=swap');
+
+/* --- ESTILOS BASE (DESKTOP) --- */
 .sobre-section {
   padding: 6rem 2rem;
   background-color: #ffffff;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Garante que os elementos decorativos não causem scroll */
 }
 
 .container {
@@ -20,63 +25,64 @@
 .sobre-texto {
   flex: 1;
   text-align: left;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 400;
 }
 
 .sobre-imagem-container {
   flex: 1;
-  position: relative;
+  display: flex; /* Usado para centralizar o wrapper, se necessário */
+  justify-content: center;
+  align-items: center;
 }
 
+/* O 'wrapper' agora é o container principal da imagem e decorações */
 .sobre-imagem-wrapper {
-  position: relative;
+  position: relative; /* Essencial para posicionar os elementos decorativos */
   width: 100%;
-  padding-top: 100%; /* Para manter proporção quadrada */
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  animation: float 6s ease-in-out infinite;
+  z-index: 2;
 }
 
 .sobre-imagem {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  animation: float 6s ease-in-out infinite;
   border: 5px solid #ffffff;
-  z-index: 2;
 }
 
-/* Elementos decorativos com cores específicas */
+/* --- DECORAÇÕES POSICIONADAS RELATIVO AO WRAPPER --- */
 .elemento-decorativo {
   position: absolute;
-  z-index: 1;
+  z-index: -1; /* Fica atrás da imagem */
 }
 
 .elemento-laranja {
-  top: -20px;
-  right: -20px;
+  top: -30px;
+  right: -30px;
   width: 120px;
   height: 120px;
-  border: 8px solid #FFA726; /* Laranja */
+  border: 8px solid #FFA726;
   border-radius: 50%;
-  background: transparent;
 }
 
 .elemento-azul {
-  bottom: -30px;
-  left: -30px;
+  bottom: -40px;
+  left: -40px;
   width: 200px;
   height: 200px;
-  border: 8px solid #42A5F5; /* Azul */
+  border: 8px solid #42A5F5;
   border-radius: 50%;
-  background: transparent;
 }
 
 .sobre-titulo {
   font-size: 2.8rem;
-  color: #1565C0; /* Azul escuro */
+  font-weight: 700;
+  color: #1565C0;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -89,14 +95,14 @@
   left: 0;
   width: 70px;
   height: 4px;
-  background: #FFA726; /* Laranja */
+  background: #FFA726;
   border-radius: 2px;
 }
 
 .sobre-descricao {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Ajustado para melhor legibilidade */
   line-height: 1.8;
-  color: #424242; /* Cinza escuro */
+  color: #424242;
   margin-bottom: 1.5rem;
 }
 
@@ -112,15 +118,13 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   flex: 1;
-  background: transparent; /* Fundo transparente */
-  border: 2px solid; /* Borda será definida por classe */
+  border: 2px solid;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .qualificacao-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-  background: rgba(255, 255, 255, 0.3); /* Leve fundo branco ao passar o mouse */
 }
 
 .qualificacao-numero {
@@ -136,62 +140,44 @@
   color: #424242;
 }
 
-/* Cores específicas para cada card */
-.qualificacao-1 {
-  border-color: #FFA726; /* Laranja */
-}
+.qualificacao-1 { border-color: #FFA726; }
+.qualificacao-1 .qualificacao-numero { color: #FFA726; }
+.qualificacao-2 { border-color: #42A5F5; }
+.qualificacao-2 .qualificacao-numero { color: #42A5F5; }
+.qualificacao-3 { border-color: #66BB6A; }
+.qualificacao-3 .qualificacao-numero { color: #66BB6A; }
 
-.qualificacao-1 .qualificacao-numero {
-  color: #FFA726; /* Laranja */
-}
-
-.qualificacao-2 {
-  border-color: #42A5F5; /* Azul */
-}
-
-.qualificacao-2 .qualificacao-numero {
-  color: #42A5F5; /* Azul */
-}
-
-.qualificacao-3 {
-  border-color: #66BB6A; /* Verde */
-}
-
-.qualificacao-3 .qualificacao-numero {
-  color: #66BB6A; /* Verde */
-}
-
-/* Animação flutuante */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
-/* Responsividade */
+/* ============================================== */
+/* ==           RESPONSIVIDADE                 == */
+/* ============================================== */
+
 @media (max-width: 992px) {
   .sobre-content {
-    flex-direction: column-reverse;
+    flex-direction: column; /* Coloca o texto em cima da imagem */
     gap: 3rem;
+    text-align: center;
   }
-  
+  .sobre-titulo::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .sobre-imagem-wrapper {
-    max-width: 500px;
+    max-width: 450px;
     margin: 0 auto;
   }
-  
   .sobre-qualificacoes {
     flex-wrap: wrap;
+    justify-content: center;
   }
-  
   .qualificacao-item {
-    flex: 0 0 calc(50% - 1rem);
+    flex: 1 1 calc(50% - 1.5rem); 
+    max-width: calc(50% - 1.5rem);
   }
 }
 
@@ -199,12 +185,24 @@
   .sobre-section {
     padding: 4rem 1.5rem;
   }
-  
-  .qualificacao-item {
-    flex: 0 0 100%;
+  .sobre-content {
+    gap: 2.5rem;
   }
-  
+  .sobre-imagem-wrapper {
+    max-width: 320px;
+  }
   .sobre-titulo {
     font-size: 2.2rem;
+  }
+  .sobre-descricao {
+    font-size: 1rem;
+  }
+  .qualificacao-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .elemento-decorativo {
+    /* Escondendo em telas muito pequenas para não poluir */
+    display: none; 
   }
 }
