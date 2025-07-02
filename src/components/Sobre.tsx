@@ -31,11 +31,11 @@ const Sobre = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="sobre-imagem-container">
             <div className="sobre-imagem-wrapper">
-              <img 
-                src="public/Vanessa.png" 
+              <img
+                src="/Vanessa.png"
                 alt="Dra. Vanessa"
                 className="sobre-imagem"
               />
