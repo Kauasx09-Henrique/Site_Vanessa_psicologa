@@ -9,22 +9,16 @@ const Abordagem = () => {
   // Dados sobre as abordagens terapêuticas com foco em pediatria
   const abordagens = [
     {
-      titulo: "Terapia Cognitivo-Comportamental Infantil",
+      titulo: "Análise do comportamento",
+      icone: "fas fa-comments",
+      descricao: "O principal objetivo da Análise do Comportamento é compreender como as pessoas agem e reagem em diferentes situações. A partir da identificação dessas relações entre comportamento e ambiente, é possível desenvolver estratégias eficazes para promover mudanças positivas na vida das pessoas — sempre com base em evidências científicas e princípios éticos.",
+      beneficios: ["TDAH", "Altas Habilidades", "ANSIEDADE "]
+    },
+    {
+      titulo: "Orientação parental ",
       icone: "fas fa-brain",
-      descricao: "Abordagem focada em ajudar crianças a identificarem e modificarem padrões de pensamento e comportamento, desenvolvendo habilidades para lidar com desafios emocionais.",
-      beneficios: ["Ansiedade infantil", "Fobias específicas", "TDAH", "Problemas de comportamento"]
-    },
-    {
-      titulo: "Psicoterapia Lúdica",
-      icone: "fas fa-gamepad",
-      descricao: "Utiliza jogos, brincadeiras e atividades criativas como ferramentas terapêuticas para que a criança possa expressar sentimentos e conflitos de forma natural.",
-      beneficios: ["Traumas infantis", "Dificuldades emocionais", "Processos de luto", "Separação dos pais"]
-    },
-    {
-      titulo: "Terapia Familiar Sistêmica",
-      icone: "fas fa-users",
-      descricao: "Abordagem que envolve toda a família no processo terapêutico, trabalhando dinâmicas relacionais e padrões de comunicação para promover mudanças positivas.",
-      beneficios: ["Conflitos familiares", "Problemas de comunicação", "Ajuste a mudanças", "Relação pais-filhos"]
+      descricao: "A orientação de pais, fundamentada na Análise do Comportamento, tem como objetivo fortalecer a relação entre pais e filhos por meio da compreensão e manejo dos comportamentos infantis. A proposta é auxiliar os responsáveis a identificarem padrões de comportamento, entenderem as causas e consequências dessas ações, e aplicarem estratégias eficazes para promover habilidades sociais, autonomia e desenvolvimento emocional saudável da criança — sempre com base em evidências científicas e respeito à individualidade de cada família.",
+      beneficios: ["Conflitos familiares", "Problemas de comunicação", "Relação pais-filhos",]
     },
 
   ];
@@ -51,7 +45,7 @@ const Abordagem = () => {
                 <ul>
                   {abordagem.beneficios.map((beneficio, i) => (
                     <li key={i}>
-                      <i className="fas fa-heart"></i>
+                      <i className="fa-solid fa-person-chalkboard"></i>
                       {beneficio}
                     </li>
                   ))}

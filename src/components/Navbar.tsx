@@ -1,6 +1,8 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
 import './style/Navbar.css'; // Usaremos o mesmo arquivo de estilo
+import logo from '../../public/logo clinica.png'; // Importe a imagem do logo
+
 
 function Navbar() {
   // Estado para controlar a visibilidade do menu mobile
@@ -12,7 +14,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="#inicio" className="nav-logo">Dra. Vanessa de Souza</a>
+      <a href="#inicio" className="nav-logo">
+        <img src={logo} alt="Logo" className="logo-image" />
+        Dra. Vanessa de Souza
+      </a>
 
       
       <div className="hamburger" onClick={toggleMenu}>

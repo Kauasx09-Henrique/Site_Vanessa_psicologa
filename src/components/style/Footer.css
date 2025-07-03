@@ -1,11 +1,23 @@
-/* Footer.css */
+/* src/style/Footer.css */
+:root {
+  --primary-blue: #0D47A1;
+  --secondary-blue: #1565C0;
+  --accent-orange: #FF8A00;
+  --accent-red: #FF5252;
+  --light-blue: #E3F2FD;
+  --white: #FFFFFF;
+  --text-light: #F5F5F5;
+}
+
 .footer {
-  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); /* Degradê azul */
-  color: #fff;
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+  color: var(--white);
   padding: 4rem 0 0;
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .footer::before {
@@ -15,7 +27,8 @@
   left: 0;
   width: 100%;
   height: 10px;
-  background: linear-gradient(to right, #FF8A00, #FF5252); /* Gradiente laranja */
+  background: linear-gradient(to right, var(--accent-orange), var(--accent-red));
+  z-index: 1;
 }
 
 .footer-container {
@@ -24,7 +37,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   position: relative;
   z-index: 2;
 }
@@ -34,22 +47,14 @@
   min-width: 250px;
   margin-bottom: 2.5rem;
   padding: 0 20px;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .footer-column h3 {
-  font-size: 1.rem;
+  font-size: 1.4rem;
   margin-bottom: 1.8rem;
   position: relative;
   padding-bottom: 12px;
   font-weight: 600;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .footer-column h3::after {
@@ -59,41 +64,44 @@
   bottom: 0;
   width: 50px;
   height: 3px;
-  background: #FF8A00; /* Laranja */
+  background: var(--accent-orange);
   border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.footer-column:hover h3::after {
+  width: 80px;
 }
 
 .footer-column p {
   margin-bottom: 1.3rem;
   line-height: 1.7;
-  display: flex;
-  align-items: flex-start;
-  font-size: 1.2rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--light-blue);
 }
 
-.footer-column i {
+.footer-icon {
   margin-right: 12px;
   font-size: 1.3rem;
   min-width: 30px;
-  color: #FF8A00; /* Laranja */
+  color: var(--accent-orange);
   transition: transform 0.3s ease;
 }
 
-.footer-column p:hover i {
-  transform: scale(1.2);
-}
-
 .footer-contact-item {
+  display: flex;
+  align-items: flex-start;
   margin-bottom: 1.2rem;
   transition: all 0.3s ease;
+  color: var(--light-blue);
 }
 
 .footer-contact-item:hover {
   transform: translateX(5px);
+}
+
+.footer-contact-item:hover .footer-icon {
+  transform: scale(1.2);
 }
 
 .social-icons {
@@ -110,74 +118,38 @@
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: #fff;
+  color: var(--white);
   font-size: 1.3rem;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .social-icons a:hover {
-  background: #FF8A00; /* Laranja */
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-color: transparent;
 }
 
-.newsletter-form {
-  display: flex;
-  margin-top: 1.5rem;
+.social-icons a:hover::after {
+  transform: scale(1);
 }
 
-.newsletter-input {
-  flex: 1;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 30px 0 0 30px;
-  font-size: 1rem;
-  outline: none;
-}
-
-.newsletter-button {
-  padding: 0 20px;
-  background: #FF8A00; /* Laranja */
-  color: white;
-  border: none;
-  border-radius: 0 30px 30px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.newsletter-button:hover {
-  background: #FF6D00;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.8rem;
-}
-
-.footer-links a {
-  color: #E3F2FD; /* Azul muito claro */
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.footer-links a i {
-  font-size: 0.9rem;
-  color: #FF8A00; /* Laranja */
-}
-
-.footer-links a:hover {
-  color: #FF8A00; /* Laranja */
-  transform: translateX(5px);
+.social-icons a:hover svg {
+  transform: scale(1.2);
 }
 
 .footer-bottom {
@@ -205,16 +177,20 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
 }
 
-.footer-bottom i {
-  color: #FF8A00; /* Laranja */
-  
+.heart-icon {
+  color: var(--accent-orange);
+  margin: 0 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 /* Responsividade */
@@ -231,6 +207,8 @@
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 0 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   
   .footer-container {
@@ -238,11 +216,13 @@
     align-items: center;
     text-align: center;
     gap: 3rem;
+    padding: 0 20px;
   }
   
   .footer-column {
     flex: 0 0 100%;
     max-width: 500px;
+    padding: 0;
   }
   
   .footer-column h3::after {
@@ -250,32 +230,26 @@
     transform: translateX(-50%);
   }
   
-  .footer-column p {
-    justify-content: center;
-  }
-  
   .social-icons {
     justify-content: center;
   }
   
-  .footer-links a {
+  .footer-contact-item {
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .footer-column {
-    padding: 0 10px;
+    min-width: 100%;
   }
   
-  .newsletter-form {
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-bottom p {
     flex-direction: column;
-    gap: 10px;
-  }
-  
-  .newsletter-input,
-  .newsletter-button {
-    border-radius: 30px;
-    width: 100%;
+    gap: 5px;
   }
 }
