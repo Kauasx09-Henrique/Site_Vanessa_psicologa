@@ -21,7 +21,7 @@ const Sobre = () => {
           
           <div className="sobre-texto">
             <h2 className="sobre-titulo">
-              <span className="destaque-titulo">Conheça</span> a Psicóloga Vanessa Sousa
+              <span className="destaque-titulo">Conheça</span> a Psicóloga Vanessa Oliveira
             </h2>
             
             <div className="sobre-trajetoria">
@@ -29,7 +29,7 @@ const Sobre = () => {
                 <div className="trajetoria-icone">🎓</div>
                 <div>
                   <h3>Formação Acadêmica</h3>
-                  <p>Eu tenho 28 anos, Formada em Psicologia desde 2018, com 7 anos de experiência profissional</p>
+                  <p>Eu tenho 30 anos, Formada em Psicologia desde 2018, com 7 anos de experiência profissional</p>
                 </div>
               </div>
               

@@ -54,7 +54,7 @@ imagem: imagemSalaEspera,
     nome: 'Asa Norte',
     endereco: 'SHN Quadra 5, Bloco E - Asa Norte, Brasília - DF, 70705-000',
     telefone: '(61) 3322-7788',
-    whatsapp: '5561999999999',
+    whatsapp: '556198514838',
     mapaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.4770118898126!2d-47.88755608898233!3d-15.776622622769974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a397858c81963%3A0x695782782973748a!2sBras%C3%ADlia%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1720013284093!5m2!1spt-BR!2sbr"
   };
 
@@ -81,7 +81,7 @@ imagem: imagemSalaEspera,
         <h2 className="section-titulo">Clínica Asa Norte</h2>
         <p className="section-subtitulo">Conheça nossas instalações e localização privilegiada</p>
         
-        {/* --- Parte 1: Carrossel (Ocupando a largura toda) --- */}
+      
         <div className="carrossel-wrapper">
           <div className="carrossel-container">
             <div 

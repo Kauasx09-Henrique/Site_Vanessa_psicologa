@@ -87,12 +87,6 @@ const Abordagem = () => {
               </div>
               
               <div className="cta-buttons">
-                <a 
-                  href="#contato"
-                  className="agendar-btn"
-                >
-                  <i className="fas fa-calendar-check"></i> Agendar Consulta
-                </a>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
 import './style/Navbar.css'; // Usaremos o mesmo arquivo de estilo
-import logo from '../../public/logo clinica.png'; // Importe a imagem do logo
+import logo from '../../public/logo-clinica.png'; // Importe a imagem do logo
 
 
 function Navbar() {
@@ -16,7 +16,7 @@ function Navbar() {
     <nav className="navbar">
       <a href="#inicio" className="nav-logo">
         <img src={logo} alt="Logo" className="logo-image" />
-        Dra. Vanessa de Souza
+        Dra. Vanessa Oliveira
       </a>
 
       
