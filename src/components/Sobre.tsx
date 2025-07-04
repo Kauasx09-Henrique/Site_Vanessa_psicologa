@@ -37,7 +37,7 @@ const Sobre = () => {
                 <div className="trajetoria-icone">👨‍👩‍👦‍👦</div>
                 <div>
                   <h3>Vida Pessoal</h3>
-                  <p>Sou casada há 6 anos. E realizei um dos meus grandes sonhos, ser  mãe. Tenho do Heitor (5 anos) e Israel (3 anos)</p>
+                  <p>Sou casada há 7 anos. E realizei um dos meus grandes sonhos, ser  mãe. Tenho do Heitor (5 anos) e Israel (3 anos)</p>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Sobre = () => {
                   <span className="qualificacao-texto">Pacientes Atendidos</span>
                 </div>
                 <div className="qualificacao-item">
-                  <span className="qualificacao-numero">5</span>
+                  <span className="qualificacao-numero">2</span>
                   <span className="qualificacao-texto">Especializações</span>
                 </div>
   

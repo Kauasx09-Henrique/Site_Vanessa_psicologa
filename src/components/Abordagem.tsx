@@ -27,7 +27,7 @@ const Abordagem = () => {
     <section id="abordagem" className="abordagem-section">
       <div className="container">
         <div className="section-header">
-          <h2>Abordagem em Psicologia Pediátrica</h2>
+          <h2>Abordagem em Análise do comportamento</h2>
           <p>Especializada em intervenções terapêuticas para crianças e adolescentes, criando um espaço seguro para expressão e desenvolvimento emocional</p>
         </div>
 
