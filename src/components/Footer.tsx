@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
           <div className="footer-contact-item">
             <FaEnvelope className="footer-icon" />
-            <span>contato@psivanessasousa.com</span>
+            <span>vanessapsi29@gmail.com</span>
           </div>
           <div className="footer-contact-item">
             <FaClock className="footer-icon" />

@@ -16,7 +16,7 @@ function Navbar() {
     <nav className="navbar">
       <a href="#inicio" className="nav-logo">
         <img src={logo} alt="Logo" className="logo-image" />
-        Dra. Vanessa Oliveira
+        Psicóloga Vanessa Oliveira
       </a>
 
       
