@@ -1,17 +1,16 @@
 /* src/style/Footer.css */
 :root {
-  --primary-blue: #0D47A1;
-  --secondary-blue: #1565C0;
-  --accent-orange: #FF8A00;
-  --accent-red: #FF5252;
-  --light-blue: #E3F2FD;
-  --white: #FFFFFF;
-  --text-light: #F5F5F5;
+  --primary-dark: #5E4E3E;       /* Era --primary-blue */
+  --secondary-dark: #72798C;     /* Era --secondary-blue */
+  --accent-main: #B6A89D;       /* Era --accent-orange */
+  --accent-secondary: #656565;   /* Era --accent-red */
+  --light-bg: #D5D3D6;          /* Era --light-blue e --white */
+  --text-light: #D5D3D6;        /* Era --text-light */
 }
 
 .footer {
-  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
-  color: var(--white);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--primary-dark) 100%);
+  color: var(--text-light);
   padding: 4rem 0 0;
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -27,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 10px;
-  background: linear-gradient(to right, var(--accent-orange), var(--accent-red));
+  background: linear-gradient(to right, var(--accent-main), var(--accent-secondary));
   z-index: 1;
 }
 
@@ -64,7 +63,7 @@
   bottom: 0;
   width: 50px;
   height: 3px;
-  background: var(--accent-orange);
+  background: var(--accent-main);
   border-radius: 2px;
   transition: width 0.3s ease;
 }
@@ -77,14 +76,14 @@
   margin-bottom: 1.3rem;
   line-height: 1.7;
   font-size: 1.1rem;
-  color: var(--light-blue);
+  color: var(--light-bg);
 }
 
 .footer-icon {
   margin-right: 12px;
   font-size: 1.3rem;
   min-width: 30px;
-  color: var(--accent-orange);
+  color: var(--accent-main);
   transition: transform 0.3s ease;
 }
 
@@ -93,7 +92,7 @@
   align-items: flex-start;
   margin-bottom: 1.2rem;
   transition: all 0.3s ease;
-  color: var(--light-blue);
+  color: var(--light-bg);
 }
 
 .footer-contact-item:hover {
@@ -116,12 +115,12 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(213, 211, 214, 0.1); /* Usando light-bg com transparência */
   border-radius: 50%;
-  color: var(--white);
+  color: var(--text-light);
   font-size: 1.3rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(213, 211, 214, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -131,7 +130,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+  background: linear-gradient(135deg, var(--accent-main), var(--accent-secondary));
   border-radius: 50%;
   transform: scale(0);
   transition: transform 0.3s ease;
@@ -168,7 +167,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(to right, transparent, rgba(213, 211, 214, 0.3), transparent);
 }
 
 .footer-bottom p {
@@ -182,7 +181,7 @@
 }
 
 .heart-icon {
-  color: var(--accent-orange);
+  color: var(--accent-main);
   margin: 0 5px;
   animation: pulse 1.5s infinite;
 }

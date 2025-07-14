@@ -1,7 +1,19 @@
 /* src/components/style/Abordagem.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap' );
+
+:root {
+  --cor-primaria: #5E4E3E;       /* Marrom Escuro */
+  --cor-secundaria: #72798C;     /* Azul Acinzentado */
+  --cor-destaque: #B6A89D;       /* Bege */
+  --cor-texto: #656565;          /* Cinza */
+  --cor-fundo-claro: #D5D3D6;    /* Cinza Claro */
+  --branco: #FFFFFF;
+  --fundo-secao: #f7f8fa; /* Um branco levemente acinzentado para o fundo */
+}
+
 .abordagem-section {
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, #f9fcff, #e6f0ff);
+  background-color: var(--fundo-secao);
   position: relative;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
@@ -18,16 +30,13 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 1.8rem;
 }
 
 .section-header h2 {
+  font-family: "Winky Sans", sans-serif;
   font-size: 2.8rem;
-  color: #1565C0; /* Azul escuro */
+  font-weight: 700;
+  color: var(--cor-primaria);
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -41,13 +50,13 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: #FF8A00; /* Laranja */
+  background: var(--cor-destaque);
   border-radius: 2px;
 }
 
 .section-header p {
   font-size: 1.2rem;
-  color: #424242; /* Cinza escuro */
+  color: var(--cor-texto);
   line-height: 1.7;
   margin-top: 2rem;
 }
@@ -55,83 +64,74 @@
 .abordagem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 5rem;
 }
 
 .abordagem-card {
-  background: white;
+  background: var(--branco);
   border-radius: 15px;
-  overflow: hidden;
   padding: 2.5rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(101, 101, 101, 0.08);
   transition: all 0.4s ease;
   position: relative;
   z-index: 1;
-  border-top: 4px solid #42A5F5; /* Azul */
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 1.4rem;
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid var(--cor-secundaria);
 }
 
 .abordagem-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border-top-color: #FF8A00; /* Laranja ao passar o mouse */
-}
-
-.abordagem-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(to right, #FF8A00, #42A5F5); /* Laranja para azul */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.abordagem-card:hover::before {
-  opacity: 1;
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(94, 78, 62, 0.12);
+  border-top-color: var(--cor-destaque);
 }
 
 .card-icon {
   font-size: 2.5rem;
-  color: #FF8A00; /* Laranja */
+  color: var(--cor-destaque);
   margin-bottom: 1.5rem;
-  background: rgba(255, 138, 0, 0.1);
+  background: linear-gradient(135deg, rgba(182, 168, 157, 0.1), rgba(114, 121, 140, 0.1));
   width: 70px;
   height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.abordagem-card:hover .card-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(182, 168, 157, 0.3);
 }
 
 .abordagem-card h3 {
+  font-family: "Winky Sans", sans-serif;
   font-size: 1.5rem;
-  color: #2c3e50;
+  font-weight: 600;
+  color: var(--cor-primaria);
   margin-bottom: 1.2rem;
 }
 
 .abordagem-card p {
-  color: #4a5568;
+  color: var(--cor-texto);
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 .beneficios-container {
-  background: #f0f8ff;
+  background: rgba(182, 168, 157, 0.05);
   padding: 1.5rem;
   border-radius: 10px;
+  border-left: 3px solid var(--cor-destaque);
 }
 
 .beneficios-container h4 {
+  font-family: "Winky Sans", sans-serif;
   font-size: 1.1rem;
-  color: #1565C0;
+  font-weight: 600;
+  color: var(--cor-secundaria);
   margin-bottom: 1rem;
 }
 
@@ -144,10 +144,12 @@
   margin-bottom: 0.8rem;
   display: flex;
   align-items: flex-start;
+  color: var(--cor-texto);
+  font-size: 0.95rem;
 }
 
 .beneficios-container i {
-  color: #FF8A00;
+  color: var(--cor-destaque);
   margin-right: 10px;
   margin-top: 4px;
 }
@@ -160,151 +162,124 @@
 .video-container {
   display: flex;
   gap: 3rem;
-  background: white;
+  background: var(--branco);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 50px rgba(94, 78, 62, 0.1);
+  align-items: center;
 }
 
 .video-wrapper {
   flex: 1.2;
   min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fafafa;
-  padding: 20px;
+  position: relative;
 }
 
 .video-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0; /* Remove a borda para preencher o wrapper */
 }
 
 .video-info {
   flex: 1;
   padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 1.4rem;
 }
 
 .video-info h3 {
-  font-size: 2.0rem;
-  color: #1565C0;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
   margin-bottom: 1.5rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .video-info p {
-  font-size: 1.5rem;
-  color: #424242;
+  font-size: 1.1rem;
+  color: var(--cor-texto);
   line-height: 1.8;
   margin-bottom: 1.5rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .destaque-box {
-  background: linear-gradient(135deg, rgba(255, 138, 0, 0.05) 0%, rgba(21, 101, 192, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(182, 168, 157, 0.08), rgba(114, 121, 140, 0.08));
   padding: 1.5rem;
   border-radius: 10px;
-  border-left: 3px solid #FF8A00;
+  border-left: 3px solid var(--cor-destaque);
   margin: 2rem 0;
   display: flex;
-  gap: 1rem;
-  
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .destaque-box i {
-  font-size: 2rem;
-  color: #FF8A00;
-  margin-top: 5px;
-  
-  
+  font-size: 2.5rem;
+  color: var(--cor-destaque);
 }
 
 .destaque-box p {
-  font-size: 1.3rem;
-  color: #424242;
+  font-size: 1.1rem;
+  color: var(--cor-texto);
   line-height: 1.7;
   margin: 0;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-weight: 500;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
 .agendar-btn {
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.7rem;
   transition: all 0.3s ease;
-  background: linear-gradient(to right, #FF8A00, #FF5252);
-  color: white !important;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--branco) !important;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(94, 78, 62, 0.2);
 }
 
 .agendar-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(94, 78, 62, 0.3);
 }
 
 /* Seção de Especializações */
 .especializacoes-container {
-  margin-top: 5rem;
+  margin-top: 6rem;
   text-align: center;
-  
 }
 
 .especializacoes-container h3 {
-  font-size: 3rem;
-  color: #1565C0;
-  margin-bottom: 3rem;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 3.5rem;
   position: relative;
   display: inline-block;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .especializacoes-container h3::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: #FF8A00;
+  width: 70px;
+  height: 4px;
+  background: var(--cor-destaque);
+  border-radius: 2px;
 }
 
 .especializacoes-grid {
@@ -314,48 +289,38 @@
 }
 
 .especializacao-item {
-  background: white;
+  background: var(--branco);
   border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(101, 101, 101, 0.08);
   transition: all 0.3s ease;
-  border-top: 4px solid #42A5F5;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  border-bottom: 4px solid var(--cor-secundaria);
 }
 
 .especializacao-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border-top-color: #FF8A00;
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(94, 78, 62, 0.12);
+  border-bottom-color: var(--cor-destaque);
 }
 
 .especializacao-item i {
   font-size: 3rem;
-  color: #FF8A00;
+  color: var(--cor-destaque);
   margin-bottom: 1.5rem;
 }
 
 .especializacao-item h4 {
-  font-size: 1.6rem;
-  color: #2c3e50;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
   margin-bottom: 1rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .especializacao-item p {
-  color: #4a5568;
+  color: var(--cor-texto);
   line-height: 1.6;
-  font-size: 1.5rem;
-    font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-size: 1rem;
 }
 
 /* Responsividade */
@@ -366,54 +331,53 @@
   
   .video-wrapper {
     min-height: 400px;
+    width: 100%;
   }
   
   .video-info {
-    padding: 2rem;
+    padding: 2.5rem;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .section-header h2 {
-    font-size: 2.3rem;
-  }
-  
   .abordagem-section {
     padding: 4rem 1.5rem;
   }
+
+  .section-header h2,
+  .especializacoes-container h3,
+  .video-info h3 {
+    font-size: 2.2rem;
+  }
   
   .cta-buttons {
-    flex-direction: column;
+    justify-content: center;
   }
   
   .agendar-btn {
     width: 100%;
+    max-width: 300px;
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .section-header h2 {
-    font-size: 2rem;
+  .abordagem-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-header h2,
+  .especializacoes-container h3,
+  .video-info h3 {
+    font-size: 1.9rem;
   }
   
-  .abordagem-card {
+  .abordagem-card, .especializacao-item {
     padding: 2rem 1.5rem;
   }
   
-  .especializacoes-container h3 {
-    font-size: 1.8rem;
-  }
-  
   .video-wrapper {
-    min-height: 300px;
-    padding: 10px;
-  }
-  .titulo4 {
-    font-size: 1.8rem;
-      font-family: "Winky Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+    min-height: 250px;
   }
 }

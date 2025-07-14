@@ -29,7 +29,7 @@ const Sobre = () => {
                 <div className="trajetoria-icone">🎓</div>
                 <div>
                   <h3>Formação Acadêmica</h3>
-                  <p>Eu tenho 30 anos, Formada em Psicologia desde 2018, com 7 anos de experiência profissional</p>
+                  <p>Me formei em Psicologia pelo Instituto de Educação Superior de Brasília (IESB), em 2018.</p>
                 </div>
               </div>
               
@@ -37,7 +37,7 @@ const Sobre = () => {
                 <div className="trajetoria-icone">👨‍👩‍👦‍👦</div>
                 <div>
                   <h3>Vida Pessoal</h3>
-                  <p>Sou casada há 7 anos. E realizei um dos meus grandes sonhos, ser  mãe. Tenho do Heitor (5 anos) e Israel (3 anos)</p>
+                  <p>Sou casada desde 2017 e realizei um dos meus grandes sonhos, ser mãe.</p>
                 </div>
               </div>
             </div>
